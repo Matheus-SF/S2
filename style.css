@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sacramento&display=swap');
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .topo-com-gifs {
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  
+  .subtitulo {
+    
+        font-size: 50px; /* aumenta o tamanho da fonte */
+        color: #9ED8DB;   /* opcional: cor fofa tipo rosa */
+        font-weight: bold; /* opcional: deixar em negrito */
+        text-align: center; /* centralizar, se quiser */
+        text-shadow: 1px 1px 3px rgb(19, 1, 4);
+  }
+  
+
+body {
+  margin: 0;
+  font-family: 'Sacramento', cursive;
+  background: #F34D85;
+  color: #333;
+  background-image: url('https://i.pinimg.com/originals/4a/1b/fc/4a1bfc109e597c8d9a9ef507fc9dc011.gif');
+  background-size: 50px;
+  background-repeat: repeat;
+}
+
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #9ED8DB;
+  text-shadow: 0 0 5px #1f060a, 0 0 10px #0a0106;
+}
+
+p {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ff66a3;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.container {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.container img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.content {
+  padding: 20px;
+  background-color: #ffe6cf;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.container.left {
+  left: 0;
+  text-align: right;
+}
+
+.container.right {
+  left: 50%;
+  text-align: left;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 20px;
+  height: 20px;
+  background-color: #e2dee0;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.container.left::after {
+  right: -10px;
+}
+
+.container.right::after {
+  left: -10px;
+}
+
+.container.left::before,
+.container.right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #ffccdd;
+  font-size: 1em;
+  color: #444;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #ff66a3;
+  left: 50%;
+  margin-left: -2px;
+}
+
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .container.left, .container.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .container::after {
+    left: 8px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    display: none;
+  }
+}
+
+.intro {
+  background-color: #ffe6f0;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff66a3;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: auto;
+  background-color: #F5CDA7;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+  font-size: 2.2em;
+  color: #9ED8DB;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #444;
+}
+
+.carousel-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 60px 0;
+  background: linear-gradient(#fff0f5, #ffe6f0);
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 700px;
+  height: 700px;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotate 30s linear infinite;
+}
+
+.carousel img {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Novo raio maior e 8 posições */
+.img1 { top: 0px;   left: 300px; }
+.img2 { top: 100px; left: 530px; }
+.img3 { top: 300px; left: 620px; }
+.img4 { top: 530px; left: 530px; }
+.img5 { top: 620px; left: 300px; }
+.img6 { top: 530px; left: 70px;  }
+.img7 { top: 300px; left: -20px; }
+.img8 { top: 100px; left: 70px;  }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  transform: translate(-50%, -50%);
+  background-color: #F5CDA7;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 10;
+}
+
+.center-text h2 {
+  color: #eea6cc;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.center-text p {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.6;
+}
+/* Animações */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  /* Corações caindo */
+  .heart {
+    position: fixed;
+    top: -50px;
+    color: pink;
+    font-size: 18px;
+    animation: fall 30s linear infinite;
+    z-index: 0;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-50px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  img {
+    width: 500px;
+    height: 500px;
+    object-fit: contain; /* preenche o espaço cortando se necessário */
+    display: block
+  }
+
+  .texto-imagem {
+    position: relative; /* Necessário para o posicionamento absoluto do GIF */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .texto {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .gif-lado {
+    position: absolute; /* Faz o GIF "flutuar" fora do contêiner */
+    right: -450px; /* Ajuste para mover o GIF para a direita */
+    top: 50%;
+    transform: translateY(-50%); /* Alinha o GIF verticalmente com o centro */
+    width: 250px; /* Ajuste o tamanho do GIF */
+  }
+  
+  .gif-lado-esquerda {
+    position: absolute;
+    left: -450px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+  }
+  
+  .gif-lado img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .gif-lado-esquerda img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .container {
+    animation: fadeIn 1.2s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
